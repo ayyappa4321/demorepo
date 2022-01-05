@@ -4,18 +4,18 @@ node {
     }
     stage('maven clean') {
 	
-       bat 'mvn clean'
+       sh 'mvn clean'
     }
     stage('maven validate') {
-       bat 'mvn validate'
+       sh 'mvn validate'
     }
 	stage('maven compile') {
-       bat 'mvn compile'
+       sh 'mvn compile'
     }
 	stage('maven test') {
-       bat 'mvn test'
+       sh 'mvn test'
     }
 	stage('maven package') {
-       bat 'mvn package'
+       sh 'mvn package'
     }
 }

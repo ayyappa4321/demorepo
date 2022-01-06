@@ -2,6 +2,10 @@ node {
     stage('git clone') { 
 	git branch: 'main', url: 'https://github.com/ayyappa4321/mymaven.git'
     }
+	stage('maven version') {
+	
+       sh 'mvn -version'
+    }
     stage('maven clean') {
 	
        sh 'mvn clean'
